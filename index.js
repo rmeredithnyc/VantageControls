@@ -827,7 +827,7 @@ class VantageLoad {
 		if (this.name.toLowerCase().indexOf("fan") != -1 ) {
 			this.lightBulbService = new Service.Fan(this.name);
 			this.lightBulbService.getCharacteristic(Characteristic.RotationSpeed)
-			.setProps({ minValue: 0, maxValue: 100, minStep: 1 });
+			.setProps({ minValue: 0, maxValue: 100, minStep: 25 });
 			this.type = "fan";
 		} else {
 			this.lightBulbService = new Service.Lightbulb(this.name);
